@@ -11,7 +11,7 @@ namespace EntityFrameWorkDemo.Models
         [Key]
         public string StudentName { get; set; }
         public string StudentClass { get; set; }
-        
+        public string City { get; set; }
        
     }
 }
