@@ -1,0 +1,41 @@
+﻿@model EntityFrameWorkDemo.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+        <div class="well" style="width:400px">
+
+
+            <div class="form-group">
+                <label>Enter Student Name</label>
+                @Html.TextBoxFor(s => s.StudentName, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label>Enter Class</label>
+                @Html.TextBoxFor(s => s.StudentClass, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label>Enter City</label>
+                @Html.TextBoxFor(s => s.City, new { @class = "form-control" })
+            </div>
+            <input type="submit" class="btn btn-primary"  />
+            @Html.ActionLink("Display", "Display",null,new { @class="btn btn-primary"})
+        </div>
+    }
+</body>
+</html>
